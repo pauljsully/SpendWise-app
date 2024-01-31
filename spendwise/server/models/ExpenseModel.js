@@ -10,7 +10,7 @@ const ExpenseSchema = new Schema({
     amount: {
         type: Number,
         required: true,
-        maxLength: 20,
+        maxLength: 100,
         trim: true
     },
     type: {
