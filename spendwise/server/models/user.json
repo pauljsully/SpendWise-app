@@ -1,33 +1,47 @@
 [
     {
         "name": "Peter",
-        "email": "email@email.com",
+        "email": "peter@email.com",
         "password": "password",
-        "income": [
-            {
-                "source": "job 1",
-                "amount": "x dollar"
-            }
-        ],
         "expense": [
             {
-                "groceries": "10"
+                "title": "job 1",
+                "amount": "x dollar",
+                "date": "2024-01-30",
+                "category": "groceries",
+                "description": "bought milk for the kids"
+            }
+        ],
+        "income": [
+            {
+                "title": "job 1",
+                "amount": "x dollar",
+                "date": "2024-01-30",
+                "category": "groceries",
+                "description": "bought milk for the kids"
             }
         ]
     },
     {
-        "name": "Peter",
-        "email": "email@email.com",
+        "name": "Paul",
+        "email": "paul@email.com",
         "password": "password",
-        "income": [
-            {
-                "source": "job 1",
-                "amount": "x dollar"
-            }
-        ],
         "expense": [
             {
-                "groceries": "10"
+                "title": "job 1",
+                "amount": "x dollar",
+                "date": "2024-01-30",
+                "category": "groceries",
+                "description": "bought milk for the kids"
+            }
+        ],
+        "income": [
+            {
+                "title": "job 1",
+                "amount": "x dollar",
+                "date": "2024-01-30",
+                "category": "groceries",
+                "description": "bought milk for the kids"
             }
         ]
     }
