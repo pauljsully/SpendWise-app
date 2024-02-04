@@ -22,14 +22,15 @@ function Navbar({active, setActive}) {
                         onClick={() => setActive(item.id)}
                         className={active === item.id ? 'active': ''}
                     >
-                        <span>{item.icon}</span>
-                        <span>{item.title}</span>
+                        <span className='icon'>{item.icon}</span>
+                        <span className='title'>{item.title}</span>
                     </li>
                 })}
             </ul>
             <div className="menu-items">
                 <li>
-                    {signout} Sign Out
+                <span className='icon'>{signout}</span> 
+                <span className='title'>Sign Out</span>
                 </li>
             </div>
         </nav>
