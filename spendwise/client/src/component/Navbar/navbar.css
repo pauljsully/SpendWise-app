@@ -1,0 +1,101 @@
+/* Common styles for .navbar and its children */
+.navbar {
+  width: 374px;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  background: rgba(252, 246, 249, 0.78);
+  border: 3px solid #FFFFFF;
+  backdrop-filter: blur(4.5px);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Styles for user container */
+.user-con {
+  height: 100px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #201f1e;
+    border: 2px solid rgb(43, 210, 146, 1);
+    padding: .2rem;
+    box-shadow: 0px 1px 17px rgba(245, 245, 245, 0.06);
+  }
+
+  h2 {
+    font-size: 30px;
+    color: rgb(43, 210, 146, 1);
+  }
+
+  p {
+    font-weight: 200;
+    color: rgb(43, 210, 146, 0.6);
+  }
+}
+
+/* Styles for menu items */
+.menu-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  
+    li {
+      display: grid;
+      grid-template-columns: 40px auto;
+      align-items: center;
+      margin: .5rem 0;
+      font-weight: 500;
+      cursor: pointer;
+      color: rgb(43, 210, 146, 0.6);
+      padding-left: 1rem;
+      position: relative;
+  
+      span {
+        transition: color .4s ease-in-out; /* Apply transition effect to span */
+      }
+  
+      &:hover {
+        span {
+          color: #2bce92; /* New color for span on hover */
+          text-shadow: 0 0 10px rgba(43, 210, 146, 0.6); /* Add shadow to span on hover */
+        }
+      }
+  
+      i {
+        color: rgb(43, 210, 146, 0.6);
+        font-size: 1.4rem;
+        transition: all .4s ease-in-out;
+      }
+    }
+  }
+  
+
+/* Styles for active state */
+.active {
+  color: rgb(43, 210, 146, 1) !important;
+
+  i {
+    color: rgb(43, 210, 146, 1) !important;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: rgb(43, 210, 146);
+    border-radius: 0 10px 10px 0;
+  }
+}

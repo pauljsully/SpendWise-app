@@ -16,7 +16,7 @@
 }
 
 body{
-    background: #1f1e1d;;
+    background: #201f1e;
     font-family: 'Ubuntu', sans-serif;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     overflow: hidden;
