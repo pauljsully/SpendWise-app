@@ -10,3 +10,4 @@ export const QUERY_ME = gql`
     }
   }
 `;
+//might need to add profileImg in this
