@@ -7,7 +7,7 @@ import { menu } from '../../utils/menu'
 function Navbar({active, setActive}) {
     
     return (
-        <nav>
+        <nav className='navbar'> 
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">

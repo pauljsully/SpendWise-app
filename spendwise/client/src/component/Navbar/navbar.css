@@ -1,22 +1,24 @@
 /* Common styles for .navbar and its children */
 .navbar {
-  width: 374px;
-  height: 100%;
-  padding: 2rem 1.5rem;
-  background: rgba(252, 246, 249, 0.78);
-  border: 3px solid #FFFFFF;
-  backdrop-filter: blur(4.5px);
-  border-radius: 32px;
+  width: 300px;
+  height: auto;
+  padding: 2rem 1rem;
+  background: rgb(38, 37, 35);
+  box-shadow: 0px 1px 17px rgba(245, 245, 245, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
+  position: fixed;
+  top: 20px; /* Adjust the top distance as needed */
+  left: 20px; /* Adjust the left distance as needed */
+  bottom: 20px;
 }
 
 /* Styles for user container */
 .user-con {
   height: 100px;
-  padding: 3rem;
+  padding: 0.4rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -28,7 +30,7 @@
     object-fit: cover;
     background: #201f1e;
     border: 2px solid rgb(43, 210, 146, 1);
-    padding: .2rem;
+    padding: .1rem;
     box-shadow: 0px 1px 17px rgba(245, 245, 245, 0.06);
   }
 
