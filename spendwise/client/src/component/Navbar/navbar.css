@@ -106,7 +106,7 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 785px) {
   /* Hide elements on smaller screens */
   .navbar {
     width: 7rem;

@@ -1,22 +1,23 @@
-import {dashboard, expenses, incomes} from '../utils/icons'
+
+import { dashboard, expenses, incomes } from '../utils/icons';
 
 export const menu = [
     {
         id: 1,
-        title: 'Dashboard',
+        title: 'Home',
         icon: dashboard,
-        link: '/dashboard'
+        link: '/home'
     },
     {
         id: 2,
-        title: "Incomes",
+        title: 'Incomes',
         icon: incomes,
-        link: "/dashboard",
+        link: '/incomes',
     },
     {
         id: 3,
-        title: "Expenses",
+        title: 'Expenses',
         icon: expenses,
-        link: "/dashboard",
+        link: '/expenses',
     },
-]
+];

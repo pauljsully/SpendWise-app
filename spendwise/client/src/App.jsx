@@ -1,4 +1,4 @@
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Outlet } from 'react-router-dom';
 import {
   ApolloClient,
@@ -9,6 +9,9 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Navbar from './component/Navbar/navbar';
+import Home from './pages/Home/home';
+import Expenses from './pages/Expenses/expenses';
+import Incomes from './pages/Incomes/incomes';
 
 
 const httpLink = createHttpLink({
@@ -33,9 +36,18 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div>
-          <Navbar />
-      </div>
+      <Router>
+        <div>
+            <Navbar />
+              <Routes>
+                {/* Define routes for each page */}
+                <Route path="/home" element={<Home />} />
+                <Route path="/expenses" element={<Expenses />} />
+                <Route path="/incomes" element={<Incomes />} />
+                {/* Add more routes for other pages */}
+            </Routes>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
