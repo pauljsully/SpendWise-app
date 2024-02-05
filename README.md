@@ -31,31 +31,35 @@ MongoDB: Install MongoDB
 ## Installation Using Code
 1.Clone the repository:
 
-`bash
+bash
 Copy code
-git clone https://github.com/your-username/SpendWise.git`
+`git clone https://github.com/your-username/SpendWise.git`
+
 2.Navigate to the project directory:
 
-`bash
+bash
 Copy code
-cd SpendWise`
+`cd SpendWise`
+
 3.Install dependencies:
 
-`bash
+bash
 Copy code
-npm install`
+`npm install`
+
 4.Configure your MongoDB connection settings in .env file.
 
 5.Run the application:
 
-`bash
+bash
 Copy code
-node server.js`
+`node server.js`
 Or, using nodemon:
 
-`bash
+bash
 Copy code
-nodemon server.js`
+`nodemon server.js`
+
 6.Open your web browser and go to http://localhost:3001 to start using SpendWise.
 
 ## Usage
