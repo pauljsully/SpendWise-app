@@ -3,6 +3,7 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
     - [Installation](#installation)
 4. [Usage](#usage)
 5. [Contributing](#contributing)
@@ -21,40 +22,41 @@ SpendWise is a React.js application developed to empower individuals in managing
 5.__Persistent Sessions:__ Utilizes session management for a seamless and secure user experience.
 6.__Backend with MongoDB:__ Powered by MongoDB through Mongoose for robust and scalable data storage.
 ## Getting Started
-### Installation 
+### Prerequisites
 Ensure that you have the following installed on your system:
 
 Node.js: Download Node.js (v18.2.0)
 MongoDB: Install MongoDB
-Installation Using Code
-Clone the repository:
+### Installation 
+## Installation Using Code
+1.Clone the repository:
 
-bash
+`bash
 Copy code
-git clone https://github.com/your-username/SpendWise.git
-Navigate to the project directory:
+git clone https://github.com/your-username/SpendWise.git`
+2.Navigate to the project directory:
 
-bash
+`bash
 Copy code
-`cd SpendWise`
-Install dependencies:
+cd SpendWise`
+3.Install dependencies:
 
-bash
+`bash
 Copy code
-`npm install`
-Configure your MongoDB connection settings in .env file.
+npm install`
+4.Configure your MongoDB connection settings in .env file.
 
-Run the application:
+5.Run the application:
 
-bash
+`bash
 Copy code
-`node server.js`
+node server.js`
 Or, using nodemon:
 
-bash
+`bash
 Copy code
-`nodemon server.js`
-Open your web browser and go to http://localhost:3001 to start using SpendWise.
+nodemon server.js`
+6.Open your web browser and go to http://localhost:3001 to start using SpendWise.
 
 ## Usage
 * Sign up for your SpendWise account, start tracking expenses, and manage your budget effectively!
