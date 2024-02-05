@@ -45,18 +45,19 @@ const resolvers = {
       return { token, user };
     },
     // add a transaction
-    addTransaction: async (parent, { date, amount, highLevelCategory, category, description }, context) => {
+    addTransaction: async (parent, { title, amount, type, date, category, description }, context) => {
       try {
         if (context.user) {
           console.log('trying to add transaction!')
           console.log(context.user.username);
           const transaction = await Transaction.create(
             {
-              date,
-              amount,
-              highLevelCategory,
-              category,
-              description,
+              title, 
+              amount, 
+              type, 
+              date, 
+              category, 
+              description 
             }
           );
 
