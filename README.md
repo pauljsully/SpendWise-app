@@ -1,5 +1,4 @@
-# Project2-patientPlus
-
+# SpendWise
 "Empowering Healthcare Professionals: Patient Plus - Your Gateway to Seamless Patient Management for Doctors and Nurses!"
 
 
