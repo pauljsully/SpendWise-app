@@ -52,13 +52,12 @@ cd patient-plus
 ```
 npm install
 ```
-4.Configure your MongoDB connection settings in .env file.
+4. Configure your MongoDB connection settings in .env file.
 
-5.Run the application:
+5. Run the application:
 ```
 npm start
 ```
-
 6. Open your web browser and go to http://localhost:3001 to access SpendWise.
 
 ## Usage
