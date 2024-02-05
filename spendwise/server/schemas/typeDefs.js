@@ -1,9 +1,19 @@
 const typeDefs = `
   type User {
-    _id: ID
-    username: String
-    email: String
+    _id: ID!
+    username: String!
+    email: String!
     password: String
+    transactions: [Transaction]
+  }
+  type Transaction {
+    _id: ID
+    title: String
+    amount: Float
+    type: String
+    date: String
+    category: String
+    description: String
   }
 
   type Auth {
@@ -12,13 +22,22 @@ const typeDefs = `
   }
 
   type Query {
-    users: [User]
-    user(username: String!): User
+    me: User
+    transactions: [Transaction]
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
+    addUser(username: String, email: String, password: String): Auth
+    login(email: String, password: String): Auth
+    addTransaction(
+      title: String!
+      amount: Float!
+      type: String!
+      date: String!
+      category: String!
+      description: String!
+    ) : Transaction
+    deleteTransaction(transactionId: ID!): Transaction
   }
 `;
 

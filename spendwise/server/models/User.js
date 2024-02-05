@@ -19,12 +19,17 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  thoughts: [
+  transactions: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Thought',
+      ref: 'Transaction',
     },
   ],
+},
+{
+  toJSON: {
+    virtuals: true,
+  },
 });
 
 userSchema.pre('save', async function (next) {
