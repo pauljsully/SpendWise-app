@@ -1,6 +1,4 @@
 # SpendWise
-"Empowering Healthcare Professionals: Patient Plus - Your Gateway to Seamless Patient Management for Doctors and Nurses!"
-
 
 ## Table of Contents
 - [Introduction](#introduction)
