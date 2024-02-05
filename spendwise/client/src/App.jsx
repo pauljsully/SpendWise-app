@@ -8,6 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+
 import Navbar from './component/Navbar/navbar';
 import Home from './pages/Home/home';
 import Expenses from './pages/Expenses/expenses';
