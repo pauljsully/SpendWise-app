@@ -1,17 +1,4 @@
-import { gql } from '@apollo/client';
-
-export const ADD_USER = gql`
-  mutation addUser($name: String!, $email: String!, $password: String!) {
-    addUser(name: $name, email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
-
+import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -25,58 +12,65 @@ export const LOGIN_USER = gql`
   }
 `;
 
-
-export const ADD_INCOME = gql`
-  mutation addIncome($profileId: ID!, $title: String!, $amount: String!, $date: String!, $category: String!, $description: String!) {
-    addIncome(profileId: $profileID, title: $title, amount: $amount, date: $date, category: $category, description: $description)) {
-      _id
-      income {
-        title
-        amount
-        date
-        category
-        description
-      }
-      
-    }
-  }
-`;
-
-
-export const REMOVE_INCOME = gql`
-  mutation removeIncome($income: String!) {
-    removeIncome(income: $income) {
-      _id
-      income
-    }
-  }
-`;
-
-export const ADD_EXPENSE = gql`
-mutation addExpense($profileId: ID!, $title: String!, $amount: String!, $date: String!, $category: String!, $description: String!) {
-  addExpense(profileId: $profileId, title: $title, amount: $amount, date: $date, category: $category, description: $description) {
-      _id
-      name
-      income {
-        title
-        amount
-        date
-        category
-        description
+export const ADD_USER = gql`
+  mutation addUser($username: String!, $email: String!, $password: String!) {
+    addUser(username: $username, email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
       }
     }
   }
 `;
 
-// mohammed also said that we do need profileId: $profileID
-
-export const REMOVE_EXPENSE = gql`
-  mutation removeExpense($income: String!) {
-    removeExpense(Expense: $income) {
+export const ADD_TRANSACTION = gql`
+  mutation addTransaction(
+    $title: String!
+    $amount: Float!
+    $type: String!
+    $date: String!
+    $category: String!
+    $description: String!
+  ) {
+    addTransaction(
+      title: $title
+      amount: $amount
+      type: $type
+      date: $date
+      category: $category
+      description: $description
+    ) {
       _id
-      income
+      title
+      amount
+      type
+      date
+      category
+      description
     }
   }
 `;
 
-// Im still not sure if the remove expense/income is totally right
+export const DELETE_USER = gql`
+  mutation deleteUser($username: String!, $email: String!, $password: String!) {
+    deleteUser(username: $username, email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+export const DELETE_TRANSACTION = gql`
+  mutation DeleteTransaction($transactionId: ID!) {
+    deleteTransaction(transactionId: $transactionId) {
+      _id
+      amount
+      description
+    }
+  }
+`;
+
