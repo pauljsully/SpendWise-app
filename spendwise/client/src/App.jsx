@@ -13,6 +13,7 @@ import Navbar from './component/Navbar/navbar';
 import Home from './pages/Home/home';
 import Expenses from './pages/Expenses/expenses';
 import Incomes from './pages/Incomes/incomes';
+import Footer from './component/Footer/footer';
 
 
 const httpLink = createHttpLink({
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/incomes" element={<Incomes />} />
                 {/* Add more routes for other pages */}
             </Routes>
+            <Footer />
         </div>
       </Router>
     </ApolloProvider>

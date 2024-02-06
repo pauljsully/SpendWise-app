@@ -19,8 +19,9 @@ function Navbar({active}) {
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
-                    <h2>Hi, Paul</h2>
+                    <h2>Spend</h2>
                     <p>Your Money</p>
+                    <h2>Wise</h2>
                 </div>
             </div>
             <ul className="menu-items">
@@ -38,7 +39,7 @@ function Navbar({active}) {
             <div className="menu-items">
                 <li>
                 <span className='icon'>{signout}</span> 
-                <span className='title'>Sign Out</span>
+                <span className='title'>Sign In/Up</span>
                 </li>
             </div>
         </nav>
