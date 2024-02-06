@@ -54,7 +54,7 @@ export const REMOVE_INCOME = gql`
 
 export const ADD_EXPENSE = gql`
 mutation addExpense($profileId: ID!, $title: String!, $amount: String!, $date: String!, $category: String!, $description: String!) {
-  addExpense(profileId: $profileID, title: $title, amount: $amount, date: $date, category: $category, description: $description)) {
+  addExpense(profileId: $profileId, title: $title, amount: $amount, date: $date, category: $category, description: $description) {
       _id
       name
       income {
@@ -64,7 +64,6 @@ mutation addExpense($profileId: ID!, $title: String!, $amount: String!, $date: S
         category
         description
       }
-      
     }
   }
 `;

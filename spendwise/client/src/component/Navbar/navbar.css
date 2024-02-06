@@ -1,6 +1,6 @@
 /* Common styles for .navbar and its children */
 .navbar {
-  width: 16rem;
+  width: 15rem;
   height: auto;
   padding: 2rem 1rem;
   background: rgb(38, 37, 35);
@@ -12,8 +12,8 @@
   position: fixed;
   top: 20px; /* Adjust the top distance as needed */
   left: 20px; /* Adjust the left distance as needed */
-  bottom: 20px;
-  transition: width 0.2s ease-in-out; 
+  bottom: calc(100px + 20px);
+  transition: width 0.05s ease-in-out; 
 }
 
 /* Styles for user container */
@@ -106,7 +106,7 @@
   }
 }
 
-@media (max-width: 785px) {
+@media (max-width: 950px) {
   /* Hide elements on smaller screens */
   .navbar {
     width: 7rem;

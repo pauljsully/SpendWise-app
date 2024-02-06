@@ -9,10 +9,10 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 
-import Navbar from './component/Navbar/navbar';
+import Navigation from './component/Navbar/navbar';
 import Home from './pages/Home/home';
-import Expenses from './pages/Expenses/expenses';
-import Incomes from './pages/Incomes/incomes';
+import Transactions from './pages/transactions/transactions';
+import Footer from './component/Footer/footer';
 
 
 const httpLink = createHttpLink({
@@ -39,14 +39,14 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-            <Navbar />
+            <Navigation />
               <Routes>
                 {/* Define routes for each page */}
                 <Route path="/home" element={<Home />} />
-                <Route path="/expenses" element={<Expenses />} />
-                <Route path="/incomes" element={<Incomes />} />
+                <Route path="/transactions" element={<Transactions />} />
                 {/* Add more routes for other pages */}
             </Routes>
+            <Footer />
         </div>
       </Router>
     </ApolloProvider>

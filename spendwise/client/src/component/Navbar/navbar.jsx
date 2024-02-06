@@ -1,48 +1,87 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './navbar.css';
-import avatar from '../../assets/img/man1.png'
-import { signout } from '../../utils/icons'
-import { menu } from '../../utils/menu'
+import React, { useState } from 'react';
+import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import './navbar.css';
+// import avatar from '../../assets/img/man1.png'
+// import { signout } from '../../utils/icons'
+// import { menu } from '../../utils/menu'
+import LoginForm from '../loginForm/loginForm';
+import SignUpForm from '../signupForm/signupForm';
+import Auth from '../../utils/auth';
 
-function Navbar({active}) {
-
-    const navigate = useNavigate();
-
-    const handleMenuItemClick = (link) => {
-        // Use the navigate function
-        navigate(link);
-    };
-    
+const Navigation = () => {
+    // set modal display state
+    const [showModal, setShowModal] = useState(false);
+  
+  
     return (
-        <nav className='navbar'> 
-            <div className="user-con">
-                <img src={avatar} alt="" />
-                <div className="text">
-                    <h2>Hi, Paul</h2>
-                    <p>Your Money</p>
-                </div>
-            </div>
-            <ul className="menu-items">
-                {menu.map((item) => {
-                    return <li
-                    key={item.id}
-                    onClick={() => handleMenuItemClick(item.link)}
-                    className={active === item.id ? 'active' : ''}
-                >
-                    <span className='icon'>{item.icon}</span>
-                    <span className='title'>{item.title}</span>
-                </li>
-                })}
-            </ul>
-            <div className="menu-items">
-                <li>
-                <span className='icon'>{signout}</span> 
-                <span className='title'>Sign Out</span>
-                </li>
-            </div>
-        </nav>
-    )
-};
-
-export default Navbar
+      <>
+        <Navbar collapseOnSelect variant='dark' expand='lg' className="navbar">
+          <Container fluid>
+            <Navbar.Brand as={Link} to='/'>
+              Spendwise
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls='navbar' />
+            <Navbar.Collapse id='navbar'>
+              <Nav className='ml-auto'>
+                  
+                <Nav.Link eventKey="1" as={Link} to='/'>
+                  Home
+                </Nav.Link>
+                {/* if user is logged in show and Enter Transactions and Logout */}
+                {Auth.loggedIn() ? (
+                  <>
+                    <Nav.Link eventKey="2" as={Link} to='/dashboard'>
+                      Dashboard
+                    </Nav.Link>
+                    <Nav.Link eventKey="3" as={Link} to='/transactions'>
+                      Transactions
+                    </Nav.Link>
+                    
+                    <Nav.Link eventKey="4" onClick={Auth.logout}>Logout</Nav.Link>
+                  </>
+                ) : (
+                  <Nav.Link eventKey="5" onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                )}
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        {/* set modal data up */}
+        <Modal
+          size='lg'
+          show={showModal}
+          onHide={() => setShowModal(false)}
+          aria-labelledby='signup-modal'>
+          {/* tab container to do either signup or login component */}
+          <Tab.Container defaultActiveKey='login'>
+            <Modal.Header closeButton>
+              <Modal.Title id='signup-modal'>
+                <Nav variant='pills'>
+                  <Nav.Item>
+                    <Nav.Link eventKey='login'>Login</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Tab.Content>
+                <Tab.Pane eventKey='login'>
+                  <LoginForm handleModalClose={() => setShowModal(false)} />
+                </Tab.Pane>
+                <Tab.Pane eventKey='signup'>
+                  <SignUpForm handleModalClose={() => setShowModal(false)} />
+                </Tab.Pane>
+              </Tab.Content>
+            </Modal.Body>
+          </Tab.Container>
+        </Modal>
+      </>
+    );
+  };
+  
+  export default Navigation;
+  
