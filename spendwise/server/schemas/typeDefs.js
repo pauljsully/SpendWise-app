@@ -23,6 +23,7 @@ const typeDefs = `
 
   type Query {
     me: User
+    user: [User]
     transactions: [Transaction]
   }
 
@@ -35,8 +36,7 @@ const typeDefs = `
       type: String!
       date: String!
       category: String!
-      description: String!
-    ) : Transaction
+      description: String!) : Transaction
     deleteTransaction(transactionId: ID!): Transaction
   }
 `;
