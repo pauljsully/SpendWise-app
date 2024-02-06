@@ -4,6 +4,10 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 const resolvers = {
   Query: {
     // me: User
+    user: async () => {
+      return User.find();
+    },
+
     me: async (parent, args, context) => {
       if (context.user) {
         return await User.findOne({ _id: context.user._id }).populate('transactions');
@@ -11,11 +15,8 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
     transactions: async (parent, args) => {
-      
      
       return await Transaction.find({}).populate('username').sort({ date: 'desc' });
-
-      
     
     },
   },
@@ -27,7 +28,7 @@ const resolvers = {
       return { token, user };
     },
     // login
-    login: async (parent, { email, password }, context) => {
+    login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -47,6 +48,7 @@ const resolvers = {
     // add a transaction
     addTransaction: async (parent, { title, amount, type, date, category, description }, context) => {
       try {
+        console.log(context)
         if (context.user) {
           console.log('trying to add transaction!')
           console.log(context.user.username);
@@ -73,11 +75,10 @@ const resolvers = {
           return transaction;
 
         } else {
-          throw new AuthenticationError("You need to be logged in!");
+          throw AuthenticationError;
         }
       } catch (err) {
-        console.log(err);
-        throw new AuthenticationError(err);
+        throw AuthenticationError;
       }
     },
     // delete a transaction
