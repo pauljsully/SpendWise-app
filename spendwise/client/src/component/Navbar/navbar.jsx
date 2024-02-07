@@ -12,7 +12,7 @@ const Navigation = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect variant='dark' expand='lg' className="navbar">
+            <Navbar collapseOnSelect variant='dark' expand='lg' className="navbar" sticky='top'>
                 <Container fluid>
                     <Navbar.Brand className="brand">
                         <img
@@ -25,7 +25,7 @@ const Navigation = () => {
                         Spendwise
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='navbar' />
-                    <Navbar.Collapse id='navbar'>
+                    <Navbar.Collapse id='navbar' className="justify-content-end">
                         <Nav className='ml-auto'>
                             <Nav.Link eventKey="1" as={Link} to='/'>
                                 About
