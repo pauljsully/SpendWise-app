@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 :root{
@@ -17,9 +18,9 @@
 
 body{
     background: #201f1e;
-    font-family: 'Ubuntu', sans-serif;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     overflow: hidden;
+    overflow-y: scroll;
     color: rgba(190, 242, 190, 0.6);
 }
 

@@ -28,7 +28,7 @@ const Navigation = () => {
                     <Navbar.Collapse id='navbar'>
                         <Nav className='ml-auto'>
                             <Nav.Link eventKey="1" as={Link} to='/'>
-                                Home
+                                About
                             </Nav.Link>
                             {Auth.loggedIn() ? (
                                 <>

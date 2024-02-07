@@ -42,7 +42,7 @@ function App() {
             <Navigation />
               <Routes>
                 {/* Define routes for each page */}
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/transactions" element={<Transactions />} />
                 {/* Add more routes for other pages */}
             </Routes>
