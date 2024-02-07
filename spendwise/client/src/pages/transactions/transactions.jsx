@@ -5,6 +5,8 @@ import { DELETE_TRANSACTION, ADD_TRANSACTION } from "../../utils/mutations";
 import moment from "moment";
 import { Modal } from "react-bootstrap";
 import TransactionForm from "../../component/Transaction/TransactionForm";
+import TransactionTable from "../../component/Transaction/TransactionTable";
+
 import Auth from "../../utils/auth";
 import "../../component/Transaction/Transaction.css";
 
@@ -202,6 +204,16 @@ const Transactions = ({ transactions, setTransactions }) => {
             </div>
           </div>
         )}
+      </div>
+
+      <div className="mt-4 d-flex justify-content-center">
+        <TransactionTable
+          data={data}
+          loading={loading}
+          deleteTransaction={deleteTransaction}
+          transactions={transactions}
+          setTransactions={setTransactions}
+        />
       </div>
     </div>
   );
