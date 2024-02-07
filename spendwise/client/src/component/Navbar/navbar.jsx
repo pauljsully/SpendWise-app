@@ -6,7 +6,7 @@ import './navbar.css';
 // import { signout } from '../../utils/icons'
 // import { menu } from '../../utils/menu'
 import LoginForm from '../loginForm/loginForm';
-import SignUpForm from '../signupForm/signupForm';
+import SignupForm from '../signupForm/signupForm';
 import Auth from '../../utils/auth';
 
 const Navigation = () => {
@@ -73,7 +73,7 @@ const Navigation = () => {
                   <LoginForm handleModalClose={() => setShowModal(false)} />
                 </Tab.Pane>
                 <Tab.Pane eventKey='signup'>
-                  <SignUpForm handleModalClose={() => setShowModal(false)} />
+                  <SignupForm handleModalClose={() => setShowModal(false)} />
                 </Tab.Pane>
               </Tab.Content>
             </Modal.Body>

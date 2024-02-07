@@ -5,7 +5,7 @@ import { ADD_USER } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const Signup = () => {
+const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
   // set state for form validation
@@ -46,6 +46,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+      
     } catch (err) {
       console.error(err);
     };
@@ -115,4 +116,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupForm;
