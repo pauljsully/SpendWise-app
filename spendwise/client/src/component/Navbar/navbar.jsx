@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from '../../assets/img/logo.png';
 import LoginForm from '../loginForm/loginForm';
-import SignUpForm from '../signupForm/signupForm';
+import SignupForm from '../signupForm/signupForm';
 import Auth from '../../utils/auth';
 
 const Navigation = () => {
