@@ -10,7 +10,6 @@ const typeDefs = `
     _id: ID
     title: String
     amount: Float
-    type: String
     date: String
     category: String
     description: String
@@ -33,7 +32,6 @@ const typeDefs = `
     addTransaction(
       title: String!
       amount: Float!
-      type: String!
       date: String!
       category: String!
       description: String!) : Transaction

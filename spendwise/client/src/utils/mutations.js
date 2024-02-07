@@ -28,7 +28,6 @@ export const ADD_TRANSACTION = gql`
   mutation addTransaction(
     $title: String!
     $amount: Float!
-    $type: String!
     $date: String!
     $category: String!
     $description: String!
@@ -36,7 +35,6 @@ export const ADD_TRANSACTION = gql`
     addTransaction(
       title: $title
       amount: $amount
-      type: $type
       date: $date
       category: $category
       description: $description
@@ -44,7 +42,6 @@ export const ADD_TRANSACTION = gql`
       _id
       title
       amount
-      type
       date
       category
       description

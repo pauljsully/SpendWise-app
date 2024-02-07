@@ -10,7 +10,6 @@ query me {
       _id
       title
       amount
-      type
       date
       category
       description
@@ -25,7 +24,6 @@ query transactions {
     _id
     title
     amount
-    type
     date
     category
     description

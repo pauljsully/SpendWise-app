@@ -46,7 +46,7 @@ const resolvers = {
       return { token, user };
     },
     // add a transaction
-    addTransaction: async (parent, { title, amount, type, date, category, description }, context) => {
+    addTransaction: async (parent, { title, amount, date, category, description }, context) => {
       try {
         console.log(context)
         if (context.user) {
@@ -56,7 +56,6 @@ const resolvers = {
             {
               title, 
               amount, 
-              type, 
               date, 
               category, 
               description 
