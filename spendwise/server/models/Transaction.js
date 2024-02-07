@@ -13,10 +13,6 @@ const TransactionSchema = new Schema({
         maxLength: 20,
         trim: true
     },
-    type: {
-        type: String,
-        default:"income"
-    },
     date: {
         type: Date,
         required: true,
