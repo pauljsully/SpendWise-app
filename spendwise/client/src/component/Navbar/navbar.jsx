@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import './navbar.css';
+import './navbar.css';
 // import avatar from '../../assets/img/man1.png'
 // import { signout } from '../../utils/icons'
 // import { menu } from '../../utils/menu'
