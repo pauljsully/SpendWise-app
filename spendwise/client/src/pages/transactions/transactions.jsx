@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./transactions.css"
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ME, QUERY_TRANSACTIONS } from "../../utils/queries";
 import { DELETE_TRANSACTION, ADD_TRANSACTION } from "../../utils/mutations";
@@ -166,14 +167,9 @@ const Transactions = ({ transactions, setTransactions }) => {
 
     .toLocaleString("en-US", { style: "currency", currency: "USD" });
 
-  // come up with calculations here
+
   return (
-    <div>
-      <div className="container transaction-page">
-        <h1 className="mt-5 mb-5 expense-tracker-header">
-          Welcome to your Expense Tracker!
-        </h1>
-      </div>
+    <div className="transaction-page">
   
       <div className="mt-5 text-center">
         <h1 id="transaction-table-header">Your Transactions</h1>
