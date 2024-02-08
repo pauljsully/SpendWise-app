@@ -8,8 +8,10 @@ import logo from '../../assets/img/logo.png';
 const Home = () => {
   return (
     <section id='about'>
-      <p className="aboutDesc">WELCOME TO</p>
-<span className="aboutTitle">Spendwise</span> <br/>
+      <container className="titlecontainer">
+      <p className="titlesm">WELCOME TO</p>
+<span className="aboutTitle">Spendwise</span>
+</container>
 
 
 <span className="aboutDesc">SpendWise is a React.js application developed to empower individuals in 
@@ -22,17 +24,18 @@ managing their finances effectively. With a modern and intuitive user interface,
         <img src={BBTech} alt="BBTech" className='aboutImg'/>
         <div className="aboutText">
             <h2>Expense Tracking History</h2>
-            <p>Browser-based technologies are essential for web development, shaping the foundation of the user interface and functionality. HTML and 
-                CSS provide the structure and styling, while JavaScript and jQuery enhance interactivity and dynamic content creation. </p>
+            <p>Expense tracking history is crucial as it provides insights into spending patterns, aiding in
+               informed financial decision-making. By monitoring expenses, individuals can create and adhere 
+               to budgets, ensuring that they meet their financial goals and avoid overspending.</p>
         </div>
     </div>
     <div className="aboutCard">
         <img src={serverDev} alt="serverDev" className='aboutImg'/>
         <div className="aboutText">
             <h2>Responsible Money Management</h2>
-            <p>Server-side development involving managing the backend of a web application, handling data, 
-                processing requests, and server management. Developed "Progressive Web Applications" (PWAs),
-                which offer app-like experiences with features like offline access.
+            <p>Becoming a better money manager is essential for achieving financial stability and long-term 
+              success. This includes budgeting, tracking expenses, saving regularly, 
+              and investing wisely to secure financial well-being and achieve financial freedom.
             </p>
         </div>
     </div>

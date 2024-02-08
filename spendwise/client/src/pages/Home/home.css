@@ -9,20 +9,34 @@
     min-height: 100vh;
 }
 
+.titlecontainer {
+    margin: 2rem;
+    border-bottom: #218b6b solid 2px;
+}
+
 .aboutTitle {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 600;
-    padding-top: rem;
-    margin-bottom: 1.5rem;
     color: #218b6b;
     font-family: 'Tektur';
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 0.5rem;
+}
+
+.titlesm {
+    display: flex;
+    font-weight: 300;
+    font-size: .8rem;
+    max-width: 50rem;
+    color: #ffff;
+    margin-bottom: -1rem; 
 }
 
 .aboutDesc {
     font-weight: 300;
     font-size: 1rem;
     max-width: 50rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     color: #ffff;
 }
 
@@ -35,7 +49,7 @@
 }
 
 .aboutCards {
-    margin: 2.5rem;
+    margin: 2rem;
     width: 100vw;
     max-width: 80%;
     text-align: left;
@@ -46,7 +60,7 @@
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: #3a3630;
+    background: #2b2a28;
     color: #ffff;
 }
 
