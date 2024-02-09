@@ -8,7 +8,7 @@ import { formatAmount } from "../../utils/helpers";
 
 
 
-export default function Analysis({ transactions, setTransactions }) {
+export default function Dashboard({ transactions, setTransactions }) {
 
 
     return (
