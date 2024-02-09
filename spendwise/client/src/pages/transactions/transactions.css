@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 2rem;
   text-align: center;
   background: #201f1e;
   color: #fff;
@@ -31,7 +31,7 @@
 
 /* Add transaction button style */
 .add-transaction-button {
-  background-color: #218b6b;
+  background-color: #218b6b !important;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -59,23 +59,27 @@
 
 /* Modal style */
 .modal {
-  background-color: #2b2a28;
-  color: #e63535;
+  background-color: rgba(119, 114, 114, 0.249);
+  backdrop-filter: blur(10px);
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Modal header style */
 .modal-header {
-  background-color: #218b6b;
+  background-color: #201f1e;
   color: #fff;
   border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid #218b6b !important;
 }
 
 /* Modal body style */
 .modal-body {
-  padding: 1.5rem;
-  background-color: #1b1a19;
+  padding: 0;
+  background-color: #201f1e;
 }
 
 /* Close button style */
@@ -95,13 +99,13 @@
 table {
   width: 100%;
   border-collapse: collapse;
-  color: #fff;
+  color: #2e2626;
 }
 
 table td,
 table th {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #218b6b;
   text-align: left;
 }
 
@@ -122,10 +126,12 @@ table th {
 .transaction-form {
   display: flex;
   flex-direction: column;
+  background-color: #1b1a19 !important;
+
 }
 
 .transaction-form label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .transaction-form input,
@@ -133,11 +139,11 @@ table th {
 .transaction-form textarea {
   margin-bottom: 1rem;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #2b2a28 !important;
   border-radius: 5px;
   font-size: 1rem;
   color: #333;
-  background-color: #fff;
+  background-color: #2b2a28 !important;
 }
 
 /* Submit button style */

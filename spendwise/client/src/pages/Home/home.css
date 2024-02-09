@@ -43,9 +43,9 @@
 .logo {
     position: absolute;
     top: 2rem;
-    right: rem;
     object-fit: cover;
-    opacity: .02;
+    opacity: .04;
+    mask-image: linear-gradient(to top, transparent, #201f1e);
 }
 
 .aboutCards {
@@ -70,6 +70,7 @@
     width: 5rem;
     margin-right: 1rem;
     margin-top: 1rem;
+    
 }
 
 .aboutText>p {

@@ -16,7 +16,7 @@ export default function TransactionForm({
   
   const [errorMessage, setErrorMessage] = useState("");
   const [showDatePicker, setShowDatePicker] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate] = useState(new Date());
   const inputRef = useRef(null);
 
   async function handleSubmit(e) {
@@ -90,7 +90,7 @@ export default function TransactionForm({
       <div className="transaction-form">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="title">Transaction Title:</label>
+            <label htmlFor="title" className="cool">Transaction Title:</label>
             <textarea
               name="title"
               className="form-control"
@@ -100,7 +100,7 @@ export default function TransactionForm({
             ></textarea>
           </div>
           <div className="form-group">
-            <label htmlFor="date">Transaction Date</label>
+            <label htmlFor="date" className="cool">Transaction Date</label>
             <div className="input-group">
               <input
                 type="text"
@@ -138,7 +138,7 @@ export default function TransactionForm({
             </div>
           </div>
           <div className="form-group">
-            <label htmlFor="amount">Transaction Amount (USD):</label>
+            <label htmlFor="amount" className="cool">Transaction Amount (USD):</label>
             <input
               className="form-control"
               id="amount"
@@ -147,7 +147,7 @@ export default function TransactionForm({
             />
           </div>
           <div className="form-group">
-            <label htmlFor="category">Select a Category:</label>
+            <label htmlFor="category" className="cool">Select a Category:</label>
             <select
               className="form-control form-select"
               id="category"
@@ -172,7 +172,7 @@ export default function TransactionForm({
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="description">Transaction Description:</label>
+            <label htmlFor="description" className="cool">Transaction Description:</label>
             <textarea
               name="description"
               className="form-control"
@@ -181,8 +181,8 @@ export default function TransactionForm({
               onChange={handleChange}
             ></textarea>
           </div>
-          <div className="form-group">
-            <Button variant="primary" type="submit">
+          <div className="form-group cool" >
+            <Button variant="primary" type="submit" >
               Add Transaction
             </Button>
             {errorMessage ? (
