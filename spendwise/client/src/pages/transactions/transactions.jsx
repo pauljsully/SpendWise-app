@@ -12,6 +12,11 @@ import Auth from "../../utils/auth";
 import "../../component/Transaction/Transaction.css";
 
 const Transactions = ({ transactions, setTransactions }) => {
+
+
+
+
+
   const [showTransactionForm, setShowTransactionForm] = useState(false);
   // const [transactionList, setTransactionList] = useState([]);
   const [transactionFormState, setTransactionFormState] = useState({
@@ -31,6 +36,11 @@ const Transactions = ({ transactions, setTransactions }) => {
 
   // query transaction data then destructure the transactions from all the data
   const { data, loading, refetch } = useQuery(QUERY_ME);
+
+
+
+
+  
 
   const [deleteTransaction] = useMutation(DELETE_TRANSACTION, {
     update(cache, { data: { deleteTransaction } }) {
