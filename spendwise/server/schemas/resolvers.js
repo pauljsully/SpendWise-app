@@ -46,28 +46,29 @@ const resolvers = {
       return { token, user };
     },
     // add a transaction
-    addTransaction: async (parent, { title, amount, date, category, description }, context) => {
+    addTransaction: async (parent, { transactionData }, context) => {
       try {
         console.log(context)
         if (context.user) {
           console.log('trying to add transaction!')
           console.log(context.user.username);
-          const transaction = await Transaction.create(
-            {
-              title, 
-              amount, 
-              date, 
-              category, 
-              description 
-            }
-          );
+          // const transaction = await Transaction.create(
+          //   {
+          //     title, 
+          //     amount, 
+          //     date, 
+          //     category, 
+          //     description 
+          //   }
+          // );
 
           console.log("transaction", transaction);
           console.log("context.user._id", context.user._id);
 
           const user = await User.findOneAndUpdate(
             { _id: context.user._id },
-            { $addToSet: { transactions: transaction._id } }
+            { $push: { transactions: transactionData } },
+            { new: true }
           );
           console.log(transaction);
           console.log(user);
