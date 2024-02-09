@@ -35,7 +35,7 @@ export default function TransactionForm({
 
       setTransactionFormState({
         title: "",
-        amount: "",
+        amount: 0.0,
         date: "",
         category: "Housing",
         description: "",

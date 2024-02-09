@@ -17,7 +17,7 @@ const Transactions = ({ transactions, setTransactions }) => {
   const [transactionFormState, setTransactionFormState] = useState({
     title: "",
     date: "",
-    amount: "",
+    amount: 0.0,
     category: "",
     description: "",
   });
