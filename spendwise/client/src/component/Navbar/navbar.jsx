@@ -32,9 +32,6 @@ const Navigation = () => {
                             </Nav.Link>
                             {Auth.loggedIn() ? (
                                 <>
-                                    <Nav.Link eventKey="2" as={Link} to='/dashboard'>
-                                        Dashboard
-                                    </Nav.Link>
                                     <Nav.Link eventKey="3" as={Link} to='/transactions'>
                                         Transactions
                                     </Nav.Link>
@@ -61,10 +58,10 @@ const Navigation = () => {
                         <Modal.Title id='signup-modal'>
                             <Nav variant='pills'>
                                 <Nav.Item>
-                                    <Nav.Link eventKey='login'>Login</Nav.Link>
+                                    <Nav.Link eventKey='login' className="cool">Login</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                                    <Nav.Link eventKey='signup' className="cool">Sign Up</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </Modal.Title>

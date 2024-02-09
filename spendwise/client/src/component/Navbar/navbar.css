@@ -54,8 +54,7 @@
 
 /* Modal Header */
 .modal-header {
-  border-bottom: none;
-  background: #201f1e;
+  background: #201f1e !important;
   padding: 1rem;
 }
 
@@ -66,38 +65,42 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #fff;
+
 }
 
 /* Modal Body */
 .modal-body {
   padding: 1.5rem;
-  background: #f8f9fa; /* Change background color */
+  background: #201f1e; /* Change background color */
 }
 
 /* Form Inputs */
 .form-control {
   margin-bottom: 1rem;
-  border-color: #ced4da; /* Improve input border color */
+  border-color: #2b2a28 !important; /* Add !important */
+  color: #fff !important; /* Add !important */
+  background-color: #2b2a28 !important; 
 }
 
-/* Buttons */
-.btn-primary {
-  background-color: #2bce92;
-  border: none;
+.custom-label {
+  color: #fff;
 }
 
-.btn-primary:hover {
-  background-color: #218b6b;
-}
-
-/* Close Button */
-.close {
-  color: #218b6b;
-  font-size: 1.5rem;
-  opacity: 1;
-}
-
-.close:hover,
-.close:focus {
-  color: #218b6b;
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+    margin: 10% auto; /* Center modal vertically */
+  }
+  
+  .modal-title {
+    font-size: 1.2rem; /* Decrease title font size for smaller screens */
+  }
+  
+  .modal-body {
+    padding: 1rem; /* Decrease body padding for smaller screens */
+  }
+  
+  .form-control {
+    font-size: small; /* Decrease input font size for smaller screens */
+  }
 }

@@ -3,6 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 
+
 import Auth from '../../utils/auth';
 
 const SignupForm = () => {
@@ -68,10 +69,9 @@ const SignupForm = () => {
         </Alert>
 
         <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
+          <Form.Label htmlFor='username' className="cool">Username</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Your username'
             name='username'
             onChange={handleInputChange}
             value={userFormData.username}
@@ -81,10 +81,9 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Label htmlFor='email' className="cool">Email</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Your email address'
             name='email'
             onChange={handleInputChange}
             value={userFormData.email}
@@ -94,10 +93,9 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label htmlFor='password' className="cool">Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Your password'
             name='password'
             onChange={handleInputChange}
             value={userFormData.password}

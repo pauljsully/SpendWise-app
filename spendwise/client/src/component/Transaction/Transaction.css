@@ -1,7 +1,6 @@
-:root {
-    --dollar-bill-green: #85bb65; 
-    --text-shadow: 2px 1px black;
-  }
+.cool {
+  font-family: 'Tektur';
+}
   
   .transaction-form {
     background: #fff;
@@ -42,13 +41,6 @@
   }
   
   .add-transaction-button {
-    background: var(--dollar-bill-green);
-    color: white;
-    box-shadow: var(--text-shadow);
-  }
-  
-  .add-transaction-button:hover {
-    background: var(--blue);
     color: white;
   }
   
@@ -66,14 +58,8 @@
   }
   
   .expense-tracker-header {
-    color: var(--dollar-bill-green);
-    text-shadow: var(--text-shadow);
-  }
+    color: #218b6b;
   
-  #transaction-table-header {
-    text-align: center;
-    color: var(--dollar-bill-green);
-    text-shadow: var(--text-shadow);
   }
   
   .sort-div {

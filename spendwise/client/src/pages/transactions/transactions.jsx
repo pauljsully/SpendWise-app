@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./transactions.css"
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ME, QUERY_TRANSACTIONS } from "../../utils/queries";
 import { DELETE_TRANSACTION, ADD_TRANSACTION } from "../../utils/mutations";
@@ -8,13 +7,12 @@ import { Modal } from "react-bootstrap";
 import TransactionForm from "../../component/Transaction/TransactionForm";
 import TransactionTable from "../../component/Transaction/TransactionTable";
 
+import "./transactions.css";
+
 import Auth from "../../utils/auth";
 import "../../component/Transaction/Transaction.css";
 
 const Transactions = ({ transactions, setTransactions }) => {
-
-
-
 
 
   const [showTransactionForm, setShowTransactionForm] = useState(false);
@@ -27,20 +25,16 @@ const Transactions = ({ transactions, setTransactions }) => {
     description: "",
   });
   // uses moment.js to set start of current week starting on sunday formatted MM/DD/YYYY
-  const [startDate, setStartDate] = useState(
+  const [startDate] = useState(
     moment().startOf("week").format("L")
   );
 
-  // uses moment.js to set end of current week ending on saturday formatted MM/DD/YYYY
-  const [endDate, setEndDate] = useState(moment().endOf("week").format("L"));
+  // uses moment.js 
+  const [endDate] = useState(moment().endOf("week").format("L"));
 
   // query transaction data then destructure the transactions from all the data
   const { data, loading, refetch } = useQuery(QUERY_ME);
 
-
-
-
-  
 
   const [deleteTransaction] = useMutation(DELETE_TRANSACTION, {
     update(cache, { data: { deleteTransaction } }) {
@@ -153,36 +147,14 @@ const Transactions = ({ transactions, setTransactions }) => {
 
     .toLocaleString("en-US", { style: "currency", currency: "USD" });
 
-  const currentWeekSpending = transactionsData
-    .reduce((acc, transaction) => {
-      const transactionDate = moment(transaction.date).format("L");
 
-      if (transactionDate >= startDate && transactionDate <= endDate) {
-        return acc + transaction.amount;
-      }
-
-      return acc;
-    }, 0)
-
-    .toLocaleString("en-US", { style: "currency", currency: "USD" });
-
-  const currentMonthSpending = transactionsData
-    .reduce((acc, transaction) => {
-      if (moment(transaction.date).format("M") === currentMonth) {
-        return acc + transaction.amount;
-      }
-
-      return acc;
-    }, 0)
-
-    .toLocaleString("en-US", { style: "currency", currency: "USD" });
 
 
   return (
     <div className="transaction-page">
   
       <div className="mt-5 text-center">
-        <h1 id="transaction-table-header">Your Transactions</h1>
+        <h1 id="transaction-table-header" className="cool">Let's Add a Transactions</h1>
         <button
           className="btn add-transaction-button"
           onClick={() => setShowTransactionForm(!showTransactionForm)}
@@ -194,7 +166,7 @@ const Transactions = ({ transactions, setTransactions }) => {
             <div className="modal">
               <Modal show={true} onHide={() => setShowTransactionForm(false)}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Add Transaction</Modal.Title>
+              
                 </Modal.Header>
                 <Modal.Body>
                   <TransactionForm
