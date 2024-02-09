@@ -7,7 +7,7 @@ const typeDefs = `
     transactions: [Transaction]
   }
   type Transaction {
-    tranID: ID
+    _id: ID
     title: String
     amount: Float
     date: String
@@ -26,19 +26,15 @@ const typeDefs = `
     transactions: [Transaction]
   }
 
-  input tranInput {
-    tranID: String!
-    title: String!
-    amount: Float!
-    date: String!
-    category: String!
-    description: String!
-  }
-
   type Mutation {
     addUser(username: String, email: String, password: String): Auth
     login(email: String, password: String): Auth
-    addTransaction(transactionData: tranInput!) : Transaction
+    addTransaction(
+      title: String!
+      amount: Float!
+      date: String!
+      category: String!
+      description: String!) : Transaction
     deleteTransaction(transactionId: ID!): Transaction
   }
 `;
