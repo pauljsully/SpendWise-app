@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.932f4200.css",
+    "main.js": "/static/js/main.f2402e7a.js",
+    "static/media/smartmoney.png": "/static/media/smartmoney.8ca38fb1361de5e11eca.png",
+    "static/media/logo.png": "/static/media/logo.0ffb7b11c84cca8ec4ba.png",
+    "static/media/expensetrack.png": "/static/media/expensetrack.b9bc66249878d9eb472e.png",
+    "index.html": "/index.html",
+    "main.932f4200.css.map": "/static/css/main.932f4200.css.map",
+    "main.f2402e7a.js.map": "/static/js/main.f2402e7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.932f4200.css",
+    "static/js/main.f2402e7a.js"
+  ]
+}
