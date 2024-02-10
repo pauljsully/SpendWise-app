@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ME, QUERY_TRANSACTIONS } from "../../utils/queries";
 import { DELETE_TRANSACTION, ADD_TRANSACTION } from "../../utils/mutations";
-import moment from "moment";
 import { Modal } from "react-bootstrap";
 import TransactionForm from "../../component/Transaction/TransactionForm";
 import TransactionTable from "../../component/Transaction/TransactionTable";
@@ -24,13 +23,7 @@ const Transactions = ({ transactions, setTransactions }) => {
     category: "",
     description: "",
   });
-  // uses moment.js to set start of current week starting on sunday formatted MM/DD/YYYY
-  const [startDate] = useState(
-    moment().startOf("week").format("L")
-  );
 
-  // uses moment.js 
-  const [endDate] = useState(moment().endOf("week").format("L"));
 
   // query transaction data then destructure the transactions from all the data
   const { data, loading, refetch } = useQuery(QUERY_ME);
@@ -127,34 +120,13 @@ const Transactions = ({ transactions, setTransactions }) => {
     return <div>Loading...</div>;
   }
 
-  const transactionsData =
-    data?.me.transactions.map((transaction) => ({
-      ...transaction,
-      date: moment.unix(transaction.date / 1000).format("MM/DD/YYYY"),
-    })) || [];
-
-  const currentDate = moment().format("L");
-  const currentMonth = moment().format("M");
-
-  const todaySpending = transactionsData
-    .reduce((acc, transaction) => {
-      if (moment(transaction.date).format("L") === currentDate) {
-        return acc + transaction.amount;
-      }
-
-      return acc;
-    }, 0)
-
-    .toLocaleString("en-US", { style: "currency", currency: "USD" });
-
-
 
 
   return (
     <div className="transaction-page">
   
       <div className="mt-5 text-center">
-        <h1 id="transaction-table-header" className="cool">Let's Add a Transactions</h1>
+        <h1 id="transaction-table-header" className="cool">Let's Add a Transaction</h1>
         <button
           className="btn add-transaction-button"
           onClick={() => setShowTransactionForm(!showTransactionForm)}

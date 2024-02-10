@@ -37,7 +37,7 @@ export default function TransactionForm({
         title: "",
         amount: 0.0,
         date: "",
-        category: "Housing",
+        category: "Medical/Health",
         description: "",
       });
       setShowTransactionForm(false);
@@ -158,17 +158,10 @@ export default function TransactionForm({
               <option value="Food-Groceries">Food-Groceries</option>
               <option value="Restaurant/Fast-Food">Restaurant/Fast-Food</option>
               <option value="Transportation">Transportation</option>
-              <option value="Utilities - Gas, Electric, Water">
-                Utilities - Gas, Electric, Water
-              </option>
-              <option value="Cable/Streaming Services">
-                Cable/Streaming Services
-              </option>
-              <option value="Insurance">Insurance</option>
               <option value="Medical/Health">Medical/Health</option>
               <option value="Entertainment">Entertainment</option>
               <option value="Vacations">Vacations</option>
-              <option value="Charity">Charity</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div className="form-group">
