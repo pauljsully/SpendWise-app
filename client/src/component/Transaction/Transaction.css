@@ -64,17 +64,25 @@
   
   .sort-div {
     width: 50%;
-    margin: 15px auto;
+    margin: 20px auto;
     align-items: center;
   }
   
   .sort {
-    color: black;
-    width: 80px;
+    color: #fff;
+    width: 90px;
     margin-top: 5px;
+    padding: 8px;
   }
   
   .spending {
     font-size: 1.5em;
   }
+  
+
+
+
+
+
+
   

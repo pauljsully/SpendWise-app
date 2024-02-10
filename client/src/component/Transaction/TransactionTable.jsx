@@ -97,7 +97,7 @@ export default function TransactionTable({
       </div>
 
       <div className="table-responsive">
-        <table className="table table-striped table-light">
+        <table className="table table-striped table-dark">
           <thead>
             <tr>
             <th scope="col">Title</th>
