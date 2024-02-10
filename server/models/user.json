@@ -3,21 +3,12 @@
         "name": "Peter",
         "email": "peter@email.com",
         "password": "password",
-        "expense": [
+        "transactions": [
             {
-                "title": "job 1",
+                "title": "groceries",
                 "amount": "x dollar",
-                "date": "2024-01-30",
-                "category": "groceries",
-                "description": "bought milk for the kids"
-            }
-        ],
-        "income": [
-            {
-                "title": "job 1",
-                "amount": "x dollar",
-                "date": "2024-01-30",
-                "category": "groceries",
+                "date": "01-30-2024",
+                "category": "Food-Groceries",
                 "description": "bought milk for the kids"
             }
         ]
@@ -28,19 +19,10 @@
         "password": "password",
         "expense": [
             {
-                "title": "job 1",
+                "title": "groceries",
                 "amount": "x dollar",
-                "date": "2024-01-30",
-                "category": "groceries",
-                "description": "bought milk for the kids"
-            }
-        ],
-        "income": [
-            {
-                "title": "job 1",
-                "amount": "x dollar",
-                "date": "2024-01-30",
-                "category": "groceries",
+                "date": "01-30-2024",
+                "category": "Food-Groceries",
                 "description": "bought milk for the kids"
             }
         ]

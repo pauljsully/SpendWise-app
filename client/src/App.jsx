@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import {
@@ -12,6 +13,7 @@ import { setContext } from '@apollo/client/link/context';
 import Navigation from './component/Navbar/navbar';
 import Home from './pages/Home/home';
 import Transactions from './pages/transactions/transactions';
+import TransactionForm from "./component/Transaction/TransactionForm";
 import Footer from './component/Footer/footer';
 
 
@@ -35,6 +37,9 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+  const [transactions, setTransactions] = useState([]);
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -43,7 +48,8 @@ function App() {
               <Routes>
                 {/* Define routes for each page */}
                 <Route path="/" element={<Home />} />
-                <Route path="/transactions" element={<Transactions />} />
+                <Route path="/transactions" element={<Transactions transactions={transactions} setTransactions={setTransactions} />}/>
+                <Route path="/transactions/add" element={<TransactionForm />}/>
                 {/* Add more routes for other pages */}
             </Routes>
             <Footer />
