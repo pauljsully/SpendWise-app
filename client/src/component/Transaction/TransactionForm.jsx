@@ -22,6 +22,10 @@ export default function TransactionForm({
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(transactionFormState);
+    if (transactionFormState.category === "") {
+      setErrorMessage("Please select a category");
+    return;
+  }
     try {
       const { data } = await addTransaction({
         variables: {
@@ -35,9 +39,9 @@ export default function TransactionForm({
 
       setTransactionFormState({
         title: "",
-        amount: 0.0,
+        amount: null,
         date: "",
-        category: "Medical/Health",
+        category: "",
         description: "",
       });
       setShowTransactionForm(false);
@@ -58,8 +62,6 @@ export default function TransactionForm({
   function handleChange(e) {
     if (!e.target.value.length) {
       setErrorMessage(`${e.target.name} is required`);
-    } else {
-      setErrorMessage("");
     }
 
     if (!errorMessage) {
@@ -153,7 +155,9 @@ export default function TransactionForm({
               id="category"
               onChange={handleChange}
               name="category"
+              value={transactionFormState.category} 
             >
+              <option value="" disabled selected hidden>Add a category</option>
               <option value="Housing">Housing</option>
               <option value="Food-Groceries">Food-Groceries</option>
               <option value="Restaurant/Fast-Food">Restaurant/Fast-Food</option>
@@ -188,3 +192,4 @@ export default function TransactionForm({
     </>
   );
 }
+
