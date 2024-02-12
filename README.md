@@ -20,9 +20,7 @@ SpendWise is a React.js application developed to empower individuals in managing
 
 * Expense Tracking: Easily record and categorize your expenses to keep a detailed financial history.
 
-* Budget Management: Set and monitor budget goals to ensure financial discipline.
-
-* Interactive Dashboard: Visualize your financial data with charts and graphs for better insights.
+* Transaction Table: View list of your expenses by date, category, and amount.
 
 * Persistent Sessions: Utilizes session management for a seamless and secure user experience.
 
