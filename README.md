@@ -4,7 +4,6 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -28,13 +27,9 @@ SpendWise is a React.js application developed to empower individuals in managing
 * Persistent Sessions: Utilizes session management for a seamless and secure user experience.
 
 * Backend with MongoDB: Powered by MongoDB through Mongoose for robust and scalable data storage.
+
 ## Getting Started
 
-### Prerequisites
-
-Ensure that you have the following installed on your system:
-
-Node.js: Download Node.js (v18.2.0) MongoDB: Install MongoDB
 
 ### Installation
 
@@ -43,25 +38,22 @@ Node.js: Download Node.js (v18.2.0) MongoDB: Install MongoDB
 git clone https://github.com/your-username/SpendWise.git
 ```
 
-2. Navigate to the project directory:
-```
-cd patient-plus
-```
+2. Navigate to the project directory
 
 3. Install dependencies:
 ```
 npm install
 ```
-4. Configure your MongoDB connection settings in .env file.
-
 5. Run the application:
 ```
-npm start
+npm run develop
 ```
 6. Open your web browser and go to http://localhost:3001 to access SpendWise.
 
 ## Usage
 * Sign up for your SpendWise account, start tracking expenses, and manage your budget effectively!
+
+* Deployed app link: "https://spendwise-8jzi.onrender.com/"
 
 
 ## Contributing
