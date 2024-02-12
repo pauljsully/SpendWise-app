@@ -15,14 +15,16 @@ const Navigation = () => {
             <Navbar collapseOnSelect variant='dark' expand='lg' className="navbar" sticky='top'>
                 <Container fluid>
                     <Navbar.Brand className="brand">
-                        <img
-                            alt=""
-                            src={logo}
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top"
-                        />{' '}
-                        Spendwise
+                        <Link to="/"> {/* Wrap the logo with Link */}
+                            <img
+                                alt=""
+                                src={logo}
+                                width="30"
+                                height="30"
+                                className="d-inline-block align-top"
+                            />{' '}
+                            Spendwise
+                        </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='navbar' />
                     <Navbar.Collapse id='navbar' className="justify-content-end">
