@@ -15,7 +15,7 @@ const Navigation = () => {
             <Navbar collapseOnSelect variant='dark' expand='lg' className="navbar" sticky='top'>
                 <Container fluid>
                     <Navbar.Brand className="brand">
-                        <Link to="/"> {/* Wrap the logo with Link */}
+                        <Link to="/">
                             <img
                                 alt=""
                                 src={logo}
