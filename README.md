@@ -53,6 +53,7 @@ npm run develop
 
 * Deployed app link: "https://spendwise-8jzi.onrender.com/"
 
+* Powerpoint link: https://docs.google.com/presentation/d/1CXd7edP3Np_oFI-t2CVLdRE1nLoM471FwMB-ot4jL_w/edit?usp=sharing
 
 ## Contributing
 
